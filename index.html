@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>Simple working of BLOCKCHAIN!</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js.js"></script>
+	</head>
+	<body>
+		<div id="main_title">
+		<span class="blockB">B</span>
+		<span class="blockL">L</span>
+			<section class="anim">
+			  <div></div>
+			</section>
+		<span class="blockC">C</span>
+		<span class="blockK">K</span>
+		<span class="chain">CHAIN<span style='color:grey; font-size: 100%; top: 80%;'>TECHNOLOGY</span></span>
+		</div>
+		<div id="right_title_brand">
+			<h1>BLOCKCHAIN</h1>
+			<h2>BLOCKCHAIN</h2>
+			<h3>BLOCKCHAIN</h3>
+			<h4>BLOCKCHAIN</h4>
+			<h5>BLOCKCHAIN</h5>
+			<h6>BLOCKCHAIN</h6>
+		</div>
+
+		<div id="main_block">
+			<div id="pro1">
+				<h1>Now to understand how BLOCKCHAIN works, let's do this activity!</h1>
+				<hr/>
+				<h2>Name/Nick name: <input id="nickname" type="text" autocomplete="off" /></h2>
+				and click <button onclick="proceed(1);">Proceed</button>
+			</div>
+			<div id="pro2">
+				<h1>Hey <span id="pro2_name"></span>, Welcome.</h1>
+				<p>
+					Blockchain, as name it self says, chain. Block chain is nothing but series of
+					blocks that link to one another and each block has unique value with which it is
+					identified (it's called HASH value).<br/><br/>
+					Let's break the process into small modules...<br/>
+					<ul>
+						<li><b>Block</b> : the container of your data (eg: bitcoin data)</li>
+							<li><b>Previous Hash</b> : it is pointer that points to hash value of previous block</li>
+							<li><b>Hash Value</b> : The Unique value of the block, used to identify block or verify integrity</li>
+							<li><b>Time Stamp</b> : timestamp is very important, as it is also helps detect modifying hash value.</li>
+							<li><b>GENESIS BLOCK</b> : this is first most block or simply origin.</li>
+							&nbsp;&nbsp;&nbsp;&nbsp;Note: Previous Hash value for Genesis block is null/zero
+					</ul>
+				</p>
+				<br/>
+				<hr/>
+				<br/>
+				<h1>Step 1: Creation of Genesis BLOCK!</h1>
+				<p>
+					Usually, The owner or founder of the chain/block creates this forst block called as GENESIS BLOCK.
+					<br/>
+					For our understanding, let us <u>assume</u>, you are the owner and now you are creating first block in block chain!
+				</p>
+				<br/>
+				<div id="block1_btn_id">
+				<button class="block1_btn" onclick="create_first_block()">Create First Block</button>
+				</div><br/>
+				<p id="create_first_block_msg"></p>
+			</div>
+			<div id="pro3">
+				Genesis Block : <div id='pro3_gen_block'></div>
+				<br/><br/><br/><br/><br/><br/><br/><hr/>
+				<h1>Now that you created your very first Block,</h1>
+				<p> Now let us consider one of your <u>friend</u> is adding his block to blockchain network</p><br/>
+				On behalf of your friend, just click on below to create his Block!<br/>
+				<div id="block2_btn_id">
+				<button class="block2_btn" onclick="create_sec_block()">Create Friend's Block</button>
+				</div><br/>
+				<p id="create_sec_block_msg"></p>
+			</div>
+			<div id="pro4">
+			<h1 style="color:red">UNDER DEVELOPMENT!</h1>
+			Sorry for delay!<br/>
+			ping me at <a href="#">nikhiltanni97@gmail.com</a> for more info!
+			</div>
+		</div>
+	</body>
+</html>

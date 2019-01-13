@@ -1,0 +1,160 @@
+#right_title_brand{
+  width: 20%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+#main_title{
+  display: block;
+  position: fixed;
+  width: 80%;
+  height: 40%;
+  /*background-color: red;*/
+  top: 30%;
+  left: 0;
+}
+
+#main_title span{
+  display: block;
+  position: absolute;
+  font-size: 850%;
+  top: 10%;
+}
+#main_title .blockB{
+  left: 7%;
+}
+#main_title .blockL{
+  left: 20%;
+}
+#main_title .blockC{
+  left: 52%;
+}
+#main_title .blockK{
+  left: 65%;
+}
+#main_title .chain{
+  font-size: 500%;
+  margin-top: 12%;
+  left: 7%;
+  color: blue;
+}
+
+#main_block{
+  display: block;
+  position: absolute;
+  top: 100%;
+  height: 100%;
+  width: 80%;
+  left: 0;
+  background: #eee;
+  background: linear-gradient(150deg, #eee 50%, #ddd 0);
+}
+
+#pro2,#pro3,#pro4{
+  display: none;
+}
+
+.block1_btn, .block2_btn{
+  padding: 2%;
+  outline: none;
+  border: 1px solid silver;
+  background-color: rgb(0,250,0);
+  margin-left: 20%;
+}
+.block1_btn:active, .block2_btn:active{
+  background-color: rgb(250,0,0);
+}
+
+.oneblock{
+  display: block;
+  position: absolute;
+  padding: 1%;
+  background-color: orange;
+  border-radius: 5%;
+  margin-left: 5%;
+  color: blue;
+  margin-bottom: 5%;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+  background: #eee;
+  background: linear-gradient(150deg, #eee 50%, #ddd 0);
+}
+
+.anim {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  display: block;
+  left: 30%;
+  animation: loading-rotation 5s linear infinite;
+  border: solid 1px #c62828;
+  border-radius: 50%;
+  margin: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .anim {
+    width: 150px;
+    height: 150px;
+    margin: 30px;
+  }
+}
+
+@keyframes loading-rotation {
+  50% {border-color: #1565c0;}
+  100% {transform: rotate(360deg);}
+}
+
+.anim div {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #c62828;
+  border-radius: 50%;
+  animation: loading-planet 5s linear infinite;
+}
+@media only screen and (min-width: 768px) {
+  .anim div {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+@keyframes loading-planet {
+  50% {background: #1565c0;}
+}
+
+.text {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  color: #c62828;
+  animation: loading-text 5s linear infinite;
+}
+@media only screen and (min-width: 768px) {
+  .text {
+    font-size: 90px;
+    letter-spacing: 0.3em;
+  }
+}
+
+@keyframes loading-text {
+  50% {color: #1565c0;}
+}
+
+

@@ -28,7 +28,7 @@
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="js.js"></script>
 	</head>
-	<body>
+	<body onload="modalset()">
 		<div id="main_title">
 		<span class="blockB">B</span>
 		<span class="blockL">L</span>
@@ -46,13 +46,18 @@
 			<h4>BLOCKCHAIN</h4>
 			<h5>BLOCKCHAIN</h5>
 			<h6>BLOCKCHAIN</h6>
+			<span style="position: absolute; top: 85%; right: 20%;display: block; position: absolute;">
+				<button class="block2_btn" style="background-color: grey" id="myBtn1">Contact me!</button><br/><br/>
+				Developed by <a href="https://github.com/NikhilTanni/" target="_blank">Nikhil Tanni</a>
+			</span>
+
 		</div>
 
 		<div id="main_block">
 			<div id="pro1">
 				<h1>Now to understand how BLOCKCHAIN works, let's do this activity!</h1>
 				<hr/>
-				<h2>Name/Nick name: <input id="nickname" type="text" autocomplete="off" /></h2>
+				<h2>Name/Nick name: <input id="nickname" type="text" autocomplete="off" /> <span style='color:red' id="nameerror"></span></h2>
 				and click <button onclick="proceed(1);">Proceed</button>
 			</div>
 			<div id="pro2">
@@ -98,11 +103,63 @@
 				<p id="create_sec_block_msg"></p>
 			</div>
 			<div id="pro4">
+				Genesis Block : <div id='pro4_gen_block'></div>
+				<br/><br/><br/><hr/>
+				<h1>Yay! your friend now added block and linked to yours.</h1>
+				<p>So, now you notice that...when you created your block (first block/genesis block) it's previous hash is 0.
+				that means, it doesn't have to link to anything before.<br/>
+				when your friend added a block, it has to linked to your hash.<hr/>
+				block - index 0 has hash: <span id="pro4_hash0"></span><br/>
+				block - index 1 has hash: <span id="pro4_hash1"></span> and is linked to your first block as previous block<br/>
+				check out that <i>prevhash</i> of index1 is same as <i>hash</i> of index 0<hr/>
+				<h2> and this is how whenever new block is added, it is linked to previous block!</h2>
+				<button class="block2_btn" onclick="proceed(4)">Got it!</button>
+			</div>
+			<div id="pro5">
+				Genesis Block : <div id='pro5_gen_block'></div>
+				<br/><br/><br/><hr/>
+				<h2> Please take a moment to understand the above block.</h2>
+				<h3>- Observe hash and previous hash values and see how the chain works!</h3>
+				<h3>- Also notice that no two blocks can have same hash value regardless of whatever data or time is!</h3><hr/>
+				<p>&nbsp;&nbsp; i hope you understood the concepts, if you have any suggestions or anything to talk regarding topic, get in touch with me! Thankyou!!<br/><br/>
+				<button class="block2_btn" id="myBtn">Contact me!</button></p>
+			</div>
+			<!-- <div id="pro4">
 			<h1 style="color:red">UNDER DEVELOPMENT!</h1>
 			Sorry for delay!<br/>
 			ping me at <a href="#">nikhiltanni97@gmail.com</a> for more info!<br/>
 				or visit <a href='https://nikhiltanni.azurewebsites.net' target='_blank'>my profile</a> for more details.
-			</div>
+			</div> -->
 		</div>
+	<div style="display: block; position: absolute; right: 0; top: 100%; height: 100%; width: 20%; background-color: #ddd;">
+			<h2>BLOCKCHAIN</h2>
+			<h4>SIMULATION</h4>
+			<div style="display: block;position: absolute;top: 30%; left: 0; background-color: transparent; width: 90%; padding-right: 1%; height: auto">
+			<button onclick="getfact();">Blockchain Fact</button><hr/>
+			<p style="text-align: center;" id="bc_fact"></p>
+			</div>
+			<span style="position: absolute; top: 85%; right: 20%;display: block; position: absolute;">
+				<button class="block2_btn" style="background-color: grey" id="myBtn1">Contact me!</button><br/><br/>
+				Developed by <a href="https://github.com/NikhilTanni/" target="_blank">Nikhil Tanni</a>
+			</span>
+	</div>
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="close">&times;</span>
+	      <h2>Contact me</h2>
+	    </div>
+	    <div class="modal-body">
+	      <p>Mail me @: <a href="javascript:void(0);">nikhiltanni97@gmail.com</a><br/><hr/>
+	      visit: <a href="https://nikhiltanni.azurewebsites.net/" target="_blank">nikhiltanni.azurewebsites.net</a> for more!</p>
+	    </div>
+	    <!-- <div class="modal-footer">
+	      <h3>Modal Footer</h3>
+	    </div> -->
+	  </div>
+
+	</div>
 	</body>
 </html>

@@ -183,6 +183,10 @@ function show_more_blks(){
 
 
 function modalset(){
+
+  setTimeout(function(){ document.getElementById("nickname").focus() }, 4000);
+
+
   // Get the modal
 var modal = document.getElementById('myModal');
 
